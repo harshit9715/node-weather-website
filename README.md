@@ -6,6 +6,10 @@ A simple NodeJs Express application that takes in a location and shows current w
 
 ```bash
 npm i
+
+# Create .env file if not yet created and add environment variables required in /src/config.js
+touch .env
+
 npm run start
 ```
 
