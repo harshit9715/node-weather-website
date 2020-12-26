@@ -9,7 +9,6 @@ const forcast = (latitude, longitude, callback) => {
             callback(body.error)
         } else {
             const data = body.current;
-            console.log(data.is_day);
             callback(undefined, {
                     message:`${data.weather_descriptions[0]}, it's ${data.temperature} degrees right now! It feels like ${data.feelslike} degrees right now`,
                     icon: data.weather_icons[0]
