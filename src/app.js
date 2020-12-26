@@ -63,13 +63,13 @@ app.get('/weather', (req, res) => {
             if (error) {
                 return res.send({error: 'Unavailable, please try another location.'})
             }
-            console.log(latitude, longitude)
+            // console.log(latitude, longitude)
             forecast(latitude, longitude, (error, data) => {
                 if (error) {
                     return res.send({error: 'Unavailable, please try another location.'})
                 }
-                console.log(location);
-                console.log(data);
+                // console.log(location);
+                // console.log(data);
                 return res.send({
                     location,
                     forecast:data.message,
