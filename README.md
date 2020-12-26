@@ -5,11 +5,13 @@ A simple NodeJs Express application that takes in a location and shows current w
 ## Deployment
 
 ```bash
+# Install dependencies
 npm i
 
 # Create .env file if not yet created and add environment variables required in /src/config.js
 touch .env
 
+# Run the application
 npm run start
 ```
 
