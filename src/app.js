@@ -6,9 +6,9 @@ const hbs = require('hbs');
 
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forcast')
+const { PORT } = require('./config');
 
 const app = express()
-const PORT = process.env.PORT || 3000
 
 // Define path for express config
 const publicDirPath = path.join(__dirname, "../public")
@@ -109,6 +109,11 @@ app.get('*', (req, res) => {
 })
 
 // Start the express app.
-app.listen(PORT, ()=> {
-    console.log('server on port:',PORT);
-})
+if (PORT){
+    app.listen(PORT, ()=> {
+        console.log('server on port:',PORT);
+    })   
+}
+else {
+    console.log('\x1b[41m\x1b[37m%s\x1b[0m', "Create a .env file in project root and mention PORT and other API-KEYs");
+}
