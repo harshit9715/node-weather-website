@@ -46,7 +46,7 @@ app.get('/help', (req, res)=> {
 app.get('/about', (req, res)=> {
     res.render('about', {
         title: "About me",
-        description: "Here is something about me.",
+        description: "This site was created by Harshit Gupta. It uses data from mapbox.com and weatherstack.com!",
         creator: "harshit"
     })
 })
