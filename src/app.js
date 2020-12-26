@@ -3,15 +3,12 @@ const path = require('path');
 const request = require('postman-request');
 const express = require('express');
 const hbs = require('hbs');
-// Create a .env file in project root and mention PORT and other API-KEYs.
-const dotenv = require('dotenv');
-const isConfigured = dotenv.config();
 
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forcast')
 
 const app = express()
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 3000
 
 // Define path for express config
 const publicDirPath = path.join(__dirname, "../public")
@@ -66,13 +63,13 @@ app.get('/weather', (req, res) => {
             if (error) {
                 return res.send({error: 'Unavailable, please try another location.'})
             }
-            // console.log(latitude, longitude)
+            console.log(latitude, longitude)
             forecast(latitude, longitude, (error, data) => {
                 if (error) {
                     return res.send({error: 'Unavailable, please try another location.'})
                 }
-                // console.log(location);
-                // console.log(data);
+                console.log(location);
+                console.log(data);
                 return res.send({
                     location,
                     forecast:data.message,
@@ -112,11 +109,6 @@ app.get('*', (req, res) => {
 })
 
 // Start the express app.
-if (isConfigured.error) {
-    console.log('\x1b[41m\x1b[37m%s\x1b[0m', "Don't forget to create a .env file in project root and mention PORT and other API-KEYs");
-  }
-else {
-    app.listen(PORT, ()=> {
-        console.log('server on port:',PORT);
-    })
-}
+app.listen(PORT, ()=> {
+    console.log('server on port:',PORT);
+})

@@ -4,14 +4,12 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node src/app.js",
-    "dev": "nodemon src/app.js -e js,hbs"
+    "start": "node src/app.js"
   },
   "keywords": [],
-  "author": "harshit9715@gmail.co",
+  "author": "harshit9715@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "hbs": "^4.1.1",
     "postman-request": "^2.88.1-postman.27"
