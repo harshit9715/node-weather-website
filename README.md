@@ -8,4 +8,4 @@ Tech Stack:
 - Handelbars
 - CSS
 
-You can check out the deployed version [here](https://weather-application-9715.herokuapp.com/).
+You can check out the deployed version [here](https://weather-9715.herokuapp.com/).
