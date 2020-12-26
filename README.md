@@ -7,10 +7,8 @@ A simple NodeJs Express application that takes in a location and shows current w
 ```bash
 # Install dependencies
 npm i
-
 # Create .env file if not yet created and add environment variables required in /src/config.js
 touch .env
-
 # Run the application
 npm run start
 ```
@@ -24,7 +22,6 @@ npm run start
 ## Requirements
 
 - NodeJS 10+ and NPM
-- Nodemon (optional)
 - enviroment variables setup (in .env file)
 
 You can check out the deployed version [here](https://weather-9715.herokuapp.com/).
