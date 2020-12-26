@@ -6,21 +6,18 @@ A simple NodeJs Express application that takes in a location and shows current w
 
 ```bash
 npm i
-## local testing
-npm run dev
-## otherwise
 npm run start
 ```
 
 ## Tech Stack
 
-- NodeJs
+- NodeJS
 - Handelbars
 - CSS
 
 ## Requirements
 
-- NodeJS 10+
+- NodeJS 10+ and NPM
 - Nodemon (optional)
 - enviroment variables setup (in .env file)
 
