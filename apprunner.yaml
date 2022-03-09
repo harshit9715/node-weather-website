@@ -2,15 +2,8 @@ version: 1.0
 runtime: nodejs12 
 build:
   commands:
-    pre-build:
-      - echo "pre-hook"
     build:        
       - npm i
-    post-build:
-      - echo "post-hook"
-  env:
-    - name: MY_VAR_EXAMPLE
-      value: "example"
 run:
   runtime-version: 12.18.4
   command: npm run start
