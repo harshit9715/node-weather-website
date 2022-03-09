@@ -1,5 +1,5 @@
 version: 1.0
-runtime: node12 
+runtime: nodejs12 
 build:
   commands:
     pre-build:
@@ -14,7 +14,7 @@ build:
     - name: MY_VAR_EXAMPLE
       value: "example"
 run:
-  runtime-version: 3.7.7
+  runtime-version: 12.18.4
   command: npm run start
   network: 
     port: 8000
