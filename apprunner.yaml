@@ -1,0 +1,28 @@
+version: 1.0
+runtime: node12 
+build:
+  commands:
+    pre-build:
+      - echo "pre-hook"
+    build:        
+      - npm i
+    post-build:
+      - echo "post-hook"
+  env:
+    - name: DJANGO_SETTINGS_MODULE
+      value: "django_apprunner.settings"
+    - name: MY_VAR_EXAMPLE
+      value: "example"
+run:
+  runtime-version: 3.7.7
+  command: npm run start
+  network: 
+    port: 8000
+    env: PORT
+  env:
+    - name: PORT
+      value: "8000"
+    - name: MAPBOX_KEY
+      value: ""
+    - name: WEATHERSTACK_KEY
+      value: ""
